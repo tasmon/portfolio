@@ -219,3 +219,15 @@ html[lang="en"] .roles li, html[lang="en"] .bag dd { line-height: 1.65; }
 
 .links { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); column-gap: 2.5rem; }
 .links b, .links a span { white-space: nowrap; }
+
+/* ---- gallery ---- */
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 0; }
+.gallery figure { margin: 0; }
+.gallery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; background: var(--wash); }
+.gallery figure:nth-child(2) img { object-position: 60% 90%; }
+.inline-photo img { object-position: 15% 40%; }
+.portrait img { object-position: 50% 30%; }
+@media (max-width: 800px) { .gallery { grid-template-columns: 1fr; } }
+
+.portrait img, .inline-photo img, .gallery img { height: auto; }
+.inline-photo img { aspect-ratio: 16 / 10; }
